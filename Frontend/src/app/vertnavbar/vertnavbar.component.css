@@ -1,0 +1,49 @@
+.sidebar
+{
+	margin-top: 80px;
+    padding-left: 30px;
+    width: 10%;
+    height: 100%;
+    overflow: auto; 
+	float: left;
+	width: 200px;
+	padding-right: px;
+}
+.sidebar_section
+{
+	font-family: system-ui;
+    font-weight: 400;
+	padding-bottom: 35px;
+	margin-bottom: 50px;
+}
+.sidebar_title h5
+{
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0;
+	margin-bottom: 21px;	
+}
+.sidebar_categories div li a
+{
+	font-size: 14px;
+	border: none;
+	position: relative;
+	line-height: 40px;
+	color: #666666;
+}
+.sidebar_categories div li a:hover
+{	
+	text-decoration: none;
+	color: #e65540;
+}
+.sidebar_categories div li a:focus{
+	outline: none !important;
+}
+.sidebar_categories h6{
+	
+}
+ul
+{
+	list-style: none;
+	margin-bottom: 0px;
+}

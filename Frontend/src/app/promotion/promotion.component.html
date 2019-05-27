@@ -1,0 +1,66 @@
+<app-carousel></app-carousel>
+
+<div class="container">
+        <div class="row ">
+            <!--div class="col-sm-12 col-md-6 col-lg-3 ">
+            <app-vertnavbar></app-vertnavbar>
+            </div-->
+            <div class="col-sm-12 col-md-6 col-lg-12 ">       
+                <div class="row">
+                        <ng-container *ngFor="let m of sources$|async">  
+                        <div class="col-12 col-sm-6 col-lg-4"> 
+                            <div class="product-img">
+                                    <img [src]="m.url" alt="{{m.name}}">
+                                <div class="product-quicview">
+                                    <a  (click)="openModal(template)"><i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <p>{{m.name}}</p>
+                                <h5 class="product-price">{{m.promotion.taux}}%</h5>
+                            </div>
+                        </div>    
+                        <ng-template #template>
+                            <div class="modal-content modal-custom ">
+                                <div class="modal-header">
+                                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-6 ">
+                                            <div class="modal-img">
+                                                <img [src]="m.url" alt="{{m.name}}"  style="width: 250px;height:400px">
+                                            </div>                    
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-1 "></div> 
+                                        <div class="col-sm-12 col-md-6 col-lg-5 ">   
+                                            <div class="product-description">
+                                                <h5>{{m.name}}</h5>
+                                                <h6 class="product-price">${{m.prix}}</h6>
+                                            </div>
+                                            <ul><br>
+                                                <p>Sizes :</p>
+                                                <div *ngFor="let taille of m.taille">
+                                                    <li>       {{taille.taille}}
+                                                    </li>
+                                                </div>
+                                                <br>
+                                                <p>Colours :</p>
+                                                <div *ngFor="let couleur of m.couleur">         
+                                                    <li  >
+                                                        {{couleur.couleur}}
+                                                    </li>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>

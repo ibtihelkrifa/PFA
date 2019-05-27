@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div class="sidebar_section">
+    <div class="sidebar_title">
+      <h5>Product Category</h5>
+    </div>
+    <ul class="sidebar_categories">
+      <div *ngFor="let m of menus$|async" ley-i="index">
+        <li ><a [routerLink]="['',m.categorie.name,m.name]">{{m.name}}</a></li>
+      </div>
+    </ul>
+  </div>
+</div>

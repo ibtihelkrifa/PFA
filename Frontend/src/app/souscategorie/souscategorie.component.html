@@ -1,0 +1,10 @@
+<app-carousel></app-carousel>
+<div class="container">
+    <div class="cat-group">
+        <ng-container *ngFor="let m of menu$|async"> 
+            <div class="single_catagory_area d-flex align-items-center bg-img" [ngStyle]="{'background-image': 'url(' + m.url + ')'}">
+                <a [routerLink]="['',m.categorie.name,m.name]" class="btn ">{{m.name}}</a>
+            </div>
+        </ng-container>
+    </div>
+</div>
